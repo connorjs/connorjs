@@ -23,6 +23,9 @@ set_up_symlink '.zsh_custom'
 # iTerm
 set_up_symlink '.iterm2_settings'
 
+# vim
+set_up_symlink '.vimrc'
+
 # change directory back down to where we started
 popd
 

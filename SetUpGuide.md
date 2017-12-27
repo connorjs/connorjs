@@ -134,6 +134,14 @@ Finally, let's also update our login shell.
 0. Confirm that `/usr/local/bin/zsh` is the value for "Login shell"
 0. Click "OK" and then click the lock icon again to lock it
 
+### Theme
+
+I use [Powerlevel9k](https://github.com/bhilburn/powerlevel9k) for my theme (prompt). All customizations can be found and edited in [powerlevel9k.zsh](./.zsh_custom/powerlevel9k.zsh), except for setting the mode (for fonts) which is set in the main [.zshrc file](./.zshrc). Here are a couple of callouts related to the default configuration.
+
+- The prompt is specially configured to handle iTerm's "prompt marks". If you have an earlier version of iTerm or wish to not use the prompt marks, you may need to edit some of the settings in the `powerleve9k.zsh` file. The comments should be descriptive enough to assist you.
+- The `dir` segment is configured to identify projects by `.idea` rather than the more common `.git`. This can be easily updated to whatever value you prefer.
+- The battery levels are pretty customizable which is nice. See [powerlevel9k's documentation](https://github.com/bhilburn/powerlevel9k#battery) or read the comments in `powerleve9k.zsh`.
+
 ---
 
  <sup id='f1'>1</sup> *Note: This is only formally tested once on a MacBook Pro running macOS High Sierra (beta 7). However, I did complete similar set-ups on a MacBook Pro running macOS Sierra and an Amazon Linux box running ???.* [↩](#r1)

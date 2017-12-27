@@ -5,8 +5,11 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh_custom
 
 # Set name of the theme to load
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#
+# Always set powerlevel9k mode before specifying theme
 # See https://github.com/bhilburn/powerlevel9k
+POWERLEVEL9K_MODE="nerdfont-complete"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # Use case-sensitive completion
 CASE_SENSITIVE="true"
