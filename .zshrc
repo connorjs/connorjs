@@ -1,3 +1,5 @@
+source $HOME/.zsh_profile
+
 # Path to your oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh
 
@@ -5,8 +7,8 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh_custom
 
 # Set name of the theme to load
-ZSH_THEME="powerlevel9k/powerlevel9k"
-# See https://github.com/bhilburn/powerlevel9k
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# See https://github.com/romkatv/powerlevel10k
 
 # Use case-sensitive completion
 CASE_SENSITIVE="true"
@@ -36,9 +38,9 @@ HIST_STAMPS="yyyy--mm--dd"
 # Add wisely, as too many plugins slow down shell startup.
 case $(uname) in
     Darwin)  # macos
-        plugins=(brew chucknorris common-aliases encode64 gitfast git-flow httpie osx sudo) ;;
+        plugins=(brew git osx) ;;
     Linux)
-        plugins=(common-aliases encode64 gitfast git-flow sudo) ;;
+        plugins=(git) ;;
     *) ;;  # no-op - I only care about macos and linux
 esac
 
@@ -50,3 +52,6 @@ esac
 # name in the main plugins directory.
 
 source $ZSH/oh-my-zsh.sh
+
+source $ZSH_CUSTOM/lazynvm.sh
+

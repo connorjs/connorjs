@@ -1,21 +1,8 @@
 # My customization for powerlevel9k prompt
 POWERLEVEL9K_MODE='nerdfont-complete'
 
-# iterm mark - workaround for iTerm2 < 3.1
-# TODO: Remove when 3.1 is officially released
-function iterm_marker() {
-    # check for existence b/c marker is 3.1+
-    # if not present, preserve the implicit newline (see lower for more details)
-    # "\n" by itself does not have the segment separator (space), hence " \u008"
-    declare -f iterm2_prompt_marks && iterm2_prompt_marks || echo "\n \u008"
-}
-
-# Custom segments
-POWERLEVEL9K_CUSTOM_ITERM2_PROMPT_MARK="iterm_marker"
-
 # Prompt segment lists (elements)
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-    custom_iterm2_prompt_mark
     root_indicator
     os_icon
     ssh
@@ -33,16 +20,6 @@ POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
 # Prompt styling
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true  # newline between commands
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true  # newline after prompt
-# I want a newline between commands (above). However, I also want iTerm2's
-# mark feature (shell integration). To get everyone playing together nicely,
-# we set the background color of the mark to none (something invalid). This
-# results in the background color of the terminal (visually showing blank).
-POWERLEVEL9K_CUSTOM_ITERM2_PROMPT_MARK_BACKGROUND='none'
-# So, we _do not_ add a newline because the mark is already adding the newline.
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=false  # turn off for iTerm2
-# We also forfeit the ability to use POWERLEVEL9K_LEFT_SUBSEGMENT_SEPARATOR 
-# because this is put between the mark and the next segment. Maybe it would
-# look fine with the right separator, but I have removed it (below in icons).
 
 # Color scheme
 POWERLEVEL9K_COLOR_SCHEME='light'
@@ -94,3 +71,4 @@ POWERLEVEL9K_RIGHT_SUBSEGMENT_SEPARATOR=''      # 
 POWERLEVEL9K_ROOT_ICON='⚡️'                       # 
 POWERLEVEL9K_ROOT_INDICATOR_BACKGROUND='black'   # ?  # works nicely with ⚡️
 POWERLEVEL9K_VCS_GIT_ICON=''                    # 
+
