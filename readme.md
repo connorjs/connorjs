@@ -1,1 +1,5 @@
-<h1 align=right>Work hard, Have fun, Make history</h1>
+before
+
+<picture><img alt="Work hard, Have fun, Make history" src="./readme.svg"></picture>
+
+after

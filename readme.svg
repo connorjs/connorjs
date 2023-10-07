@@ -1,0 +1,17 @@
+<svg
+  aria-describedby="desc"
+  aria-description="a desc"
+  aria-label="a label"
+  aria-labelledby="title"
+  font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Noto Sans,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji"
+  role="image"
+  text-anchor="end"
+  viewBox="0 0 850 50"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title id="title">Title</title>
+  <desc id="desc">Description</desc>
+  <text x="100%" y="80%" fill="currentColor" font-size="40px">
+    Work hard, Have fun, Make history
+  </text>
+</svg>
